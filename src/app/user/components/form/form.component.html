@@ -1,0 +1,17 @@
+<form [formGroup]="formUserSave">
+    <div class="input-group flex-nowrap pt-4">
+        <span class="input-group-text" id="addon-wrapping">name</span>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" formControlName="name">
+    </div>
+    <div class="input-group flex-nowrap pt-4">
+        <span class="input-group-text" id="addon-wrapping">email</span>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" formControlName="email">
+    </div>
+    <div class="input-group flex-nowrap pt-4">
+        <span class="input-group-text" id="addon-wrapping">country</span>
+        <input type="text" class="form-control" aria-label="Username" aria-describedby="addon-wrapping" formControlName="country">
+    </div>
+    <div class="d-flex justify-content-center pt-4">
+        <button type="submit" class="btn btn-primary w-100" (click)="saveUser()" [disabled]="formUserSave.invalid" >Save</button>
+    </div>
+</form>
